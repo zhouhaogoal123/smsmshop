@@ -1,0 +1,294 @@
+.goods_info_top_center_right_left {
+  float: left;
+  width: 550px;
+  font-size: 14px;
+
+  .goods_attrs_all {
+    margin: 10px;
+  }
+
+  .goods_attrs {
+    line-height: 30px;
+    display: flex;
+    margin: 10px 0;
+
+    .title {
+      text-align-last: justify;
+      font-family: simsun;
+      color: #999;
+      margin-right: 15px;
+      width: 60px;
+      flex-shrink: 0; //让flex子元素不被压缩
+    }
+
+    .el-radio {
+      border: 2px solid #ccc;
+      background: #fff;
+      margin-right: 10px;
+      margin-bottom: 5px;
+      padding: 3px 12px 3px 3px;
+      color: #666;
+      position: relative;
+
+      /deep/.el-radio__input {
+        display: none;
+      }
+
+      /deep/.el-radio__label {
+        padding-left: 5px;
+        font-size: 13px;
+      }
+
+      /deep/.el-radio__input .el-radio__inner:hover {
+        border-color: #ccc;
+      }
+
+      /deep/.el-input__inner {
+        border-radius: 0;
+      }
+
+      /deep/.el-radio__input.is-checked+.el-radio__label {
+        color: $main_color;
+      }
+
+      .iconfont {
+        font-size: 12px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
+    }
+
+    /deep/.is-checked {
+      border-color: $main_color;
+    }
+
+    .el-radio:hover {
+      border-color: $main_color;
+    }
+  }
+
+  // 按钮一栏
+  .goods_info_btn {
+    display: flex;
+
+    // 购买数量
+    .goods_info_num {
+      padding: 10px;
+      margin-top: 10px;
+      display: flex;
+
+      .goods_info_num_title {
+        width: 60px;
+        text-align-last: justify;
+        font-family: simsun;
+        color: #999;
+        line-height: 30px;
+        margin-right: 15px;
+      }
+
+      // 计数器样式
+      .el-input-number {
+        line-height: 28px;
+        width: 110px;
+
+        /deep/.el-input__inner {
+          height: 30px;
+          line-height: 30px;
+          padding: 0 35px;
+        }
+
+        /deep/.el-input-number__decrease,
+        /deep/.el-input-number__increase {
+          width: 30px;
+        }
+
+        /deep/.el-input input {
+          border-radius: 0;
+        }
+      }
+    }
+
+    .goods_info_add_cart {
+      background: $main_color;
+      line-height: 40px;
+      height: 40px;
+      margin: 15px 20px 0 15px;
+      border-radius: 3px;
+      color: #fff;
+      padding: 0 15px;
+      cursor: pointer;
+
+      i {
+        margin-right: 6px;
+      }
+
+      span {
+        margin-left: 6px;
+      }
+    }
+
+    .goods_info_add_cart:hover {
+      opacity: 0.9;
+    }
+  }
+
+  .goods_info_title {
+    margin-bottom: 15px;
+
+    p {
+      font-size: 16px;
+      font-weight: 700;
+      color: #000;
+    }
+  }
+}
+
+// 商品价格
+.sellprice {
+  display: flex;
+  line-height: 30px;
+  height: 30px;
+  padding: 10px;
+  background: #f1f1f1;
+  margin-bottom: 10px;
+
+  .font_justify {
+    font-family: simsun;
+    color: #999;
+    width: 60px;
+    text-align-last: justify;
+    margin-right: 15px;
+  }
+
+  .finalprice {
+    color: $main_color;
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  .compareprice {
+    color: #999;
+    font-style: italic;
+    text-decoration: line-through;
+  }
+}
+
+.goods_info_top_center_right_right {
+  float: right;
+  width: 200px;
+  margin-left: 20px;
+}
+
+.goods_info_top_mbx {
+  margin: 30px auto;
+}
+
+.goods_info_top_left {
+  width: 402px;
+  margin-right: 28px;
+  float: left;
+
+  // 放大镜大图
+  .goods_image_item {
+    width: 400px;
+    height: 400px;
+    display: block;
+    border: 1px solid #efefef;
+  }
+
+  // 下方小图
+  .pic_zoom_list {
+    position: relative;
+    border: 1px solid #efefef;
+    border-top: none;
+    display: flex;
+
+    .picsmall {
+      width: 310px;
+      overflow: hidden;
+    }
+
+    ul {
+      display: flex;
+      position: relative;
+      left: 0;
+      transition: 0.2s linear;
+    }
+
+    ul li {
+      flex-shrink: 0;
+      margin: 10px 10px 10px 0;
+      border: 1px solid #efefef;
+      width: 54px;
+      height: 60px;
+      box-sizing: border-box;
+      cursor: pointer;
+
+      .el-image {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    ul li:hover {
+      border-color: $main_color;
+    }
+
+    ul li:last-child() {
+      margin-right: 0;
+    }
+
+    ul li.border_color {
+      border-color: $main_color;
+    }
+
+    .pic_zoom_list_left {
+      font-size: 25px;
+      line-height: 80px;
+      color: #666;
+      cursor: pointer;
+      position: relative;
+      z-index: 2;
+      background: #fff;
+      padding: 0 10px;
+
+      :hover {
+        color: $main_color;
+      }
+    }
+
+    .pic_zoom_list_right {
+      position: absolute;
+      z-index: 2;
+      right: 0;
+      cursor: pointer;
+      font-size: 25px;
+      line-height: 80px;
+      color: #666;
+      padding: 0 10px;
+      background: #fff;
+
+      :hover {
+        color: $main_color;
+      }
+    }
+  }
+}
+
+// 评论销量积分等数量
+.aboutgoodnum {
+  color: #999;
+  font-size: 12px;
+  line-height: 20px;
+  padding: 5px 30px;
+  margin: 20px 0 60px;
+  text-align: center;
+  border-top: 1px dotted #d8d8d8;
+  border-bottom: 1px dotted #d8d8d8;
+
+  .salenum,
+  .comment {
+    border-right: 1px solid #f1f1f1;
+  }
+}

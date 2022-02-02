@@ -1,0 +1,130 @@
+.elformclass {
+  width: 400px;
+  margin: auto;
+  .el-form-item {
+    margin-bottom: 30px;
+    /deep/.el-input-group__prepend {
+      width: 70px;
+      text-align-last: justify;
+    }
+    /deep/.el-input__inner {
+      border-color: #dcdfe6;
+    }
+  }
+}
+
+.agree {
+  width: 400px;
+  margin: 10px auto 20px;
+  /deep/.el-checkbox__input.is-checked /deep/.el-checkbox__inner {
+    background-color: $main_color;
+    border-color: $main_color;
+  }
+  /deep/.el-checkbox__input.is-focus /deep/.el-checkbox__inner {
+    border-color: $main_color;
+  }
+  /deep/.el-checkbox__input.is-checked + .el-checkbox__label {
+    color: #606266;
+  }
+  a {
+    color: #013adf;
+  }
+}
+
+.btn {
+  width: 400px;
+  margin: auto;
+  .el-button {
+    width: 100%;
+  }
+}
+.tocompany_register {
+  width: 400px;
+  margin: auto;
+  text-align: end;
+  margin-top: 20px;
+  line-height: 22px;
+  color: #999;
+  .iconfont {
+    vertical-align: top;
+    font-size: 26px;
+    padding-right: 5px;
+  }
+  .font {
+    font-size: 16px;
+    color: #666;
+  }
+  .font:hover{
+    color: $main_color;
+    cursor: pointer;
+  }
+}
+
+.tophead {
+  box-shadow: 0 1px 20px 0 #d8d8d8;
+  header {
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    .smlogo {
+      height: 60px;
+      padding: 20px 0;
+      display: flex;
+      .el-image {
+        width: 200px;
+        cursor: pointer;
+      }
+      span {
+        line-height: 60px;
+        padding-left: 20px;
+        font-size: 20px;
+        color: #999;
+        font-weight: 700;
+      }
+    }
+    .tologin {
+      padding-bottom: 15px;
+      color: #999;
+      span {
+        cursor: pointer;
+        color: $main_color;
+      }
+    }
+  }
+}
+.centercontent {
+  margin: 50px;
+  // 短信验证码栏
+  .send_left {
+    width: 200px;
+  }
+
+  .send_right {
+    background: #333;
+    color: #fff;
+    width: 180px;
+    border: none;
+    height: 40px;
+    margin-left: 20px;
+    cursor: pointer;
+  }
+  .send_right:hover {
+    opacity: 0.9;
+  }
+  .error_msgfont {
+    color: $main_color;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
+    margin: 10px 0;
+    border: 1px solid $main_color;
+    padding: 5px 0;
+    background: #f8e0e0;
+    .iconfont {
+      font-size: 14px;
+      padding-right: 3px;
+    }
+  }
+}

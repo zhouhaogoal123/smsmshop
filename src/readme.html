@@ -1,0 +1,140 @@
+apply/apply 售后申请
+'order_detail_id'=> 'required|exists:order_details,id',
+            'type'    => 'required|in:1,2,3,4', //服务类型
+            'num'     => 'required', //数量
+            'attr_id' => 'required_if:type,2', //换商品的属性
+            'amount'  => 'required_if:type,1',
+            'state'   => 'required|in:1,2', //1上门取件|2自己快递
+            'cause_id'=> 'required',
+            'remark'  => 'required', //问题说明
+            'get_name'=> 'required', #收货人姓名
+            'get_mobile'=> 'required',#收货人电话
+            'get_district_id'=> 'required',#收货人所在地区
+            'get_detail'=> 'required',#收货人地址详情
+
+$from_name = $request->input('from_name'); //取货
+$from_mobile = $request->input('from_mobile');
+$from_district_id = $request->input('from_district_id');
+$from_detail = $request->input('from_detail');
+$prove = $request->input('prove');//凭证
+
+<!-- 售后详情 -->
+apply/after_sales
+order_detail_id
+
+
+$api->post('department/proof', 'Api\Company\DepartmentController@proof');//专用发票资质添加
+'identifier'=> 'required|unique:company_invoices,company_id,'.$user->company->id, //纳税人识别号
+'mobile'    => 'required|is_mobile', //电话
+'bank'      => 'required', //银行
+'account'   => 'required', //银行账号
+'site'      => 'required', //注册地址
+
+$api->post('department/recipient', 'Api\Company\DepartmentController@recipient');//专用发票收票地址修改
+'name'       => 'required', //收票人
+'phone'      => 'required', //收票人手机号
+'address'    => 'required',
+
+department/proof_show //资质获取
+
+company/edit 修改公司信息
+$number = $request->input('number');
+$district_id = $request->input('district_id');
+$detail = $request->input('detail');
+
+
+$consignee = $request->input('consignee');
+$cphone = $request->input('cphone');
+$caddress = $request->input('caddress');
+paper 电子发票0纸质1
+
+
+
+'identifier'=> 'required_if:sort,2',
+'mobile'=> 'required_if:type,2',
+'bank'=> 'required_if:type,2',
+'account'=> 'required_if:type,2',
+'site'=> 'required_if:type,2',
+
+'name'=> 'required',
+'phone'=> 'required',
+'address'=> 'required',
+'district_id'=> 'required|exists:districts,id'
+
+department/add
+部门添加
+token 是 用户凭证
+company_id 是 企业ID
+name 是 部门名称
+distribute 否 报销额度
+
+department/users
+部门添加员工
+token 是 用户凭证
+company_id 是 企业ID
+department_id 是 部门ID
+users 是 用户组['mobile'=>电话,'password'=>密码]必须是数组类型
+
+
+'sale_at' => $goods->sale_at,
+'sales'   => $goods->sales,
+'comment' => $goods->comment,
+搜索页商品的。上架时间，销量，评论数
+
+$api->get('message/list', 'Api\Message\MessageController@list');
+$api->get('message/count', 'Api\Message\MessageController@count');
+$api->get('message/show', 'Api\Message\MessageController@show');
+$api->get('message/examine', 'Api\Message\MessageController@examine');
+
+<!-- 公告详情，公告列表 -->
+$api->get('notice/list', 'Api\Message\NoticeController@list');
+$api->get('notice/show', 'Api\Message\NoticeController@show');
+
+
+ <!--发票申请编辑  -->
+$api->post('invoice/edit', 'Api\Order\InvoiceController@edit');
+head_id 发票申请ID
+'sort'  => 'required|in:1,2',
+'type'  => 'required|in:1,2',
+'title'  => 'required',
+'identifier'=> 'required_if:sort,2',
+'phone'=> 'required_if:type,2',
+'bank'=> 'required_if:type,2',
+'bank_account'=> 'required_if:type,2',
+'address'=> 'required_if:type,2',
+'consignee'=> 'required',
+'cphone'=> 'required',
+'caddress'=> 'required',
+'district_id'=> 'required|exists:districts,id'
+
+<!-- 发票申请 -->
+$api->post('invoice/apply', 'Api\Order\InvoiceController@apply');
+order_id 订单ID
+'sort'  => 'required|in:1,2',
+'type'  => 'required|in:1,2',
+'title'  => 'required',
+'identifier'=> 'required_if:sort,2',
+'phone'=> 'required_if:type,2',
+'bank'=> 'required_if:type,2',
+'bank_account'=> 'required_if:type,2',
+'address'=> 'required_if:type,2',
+'consignee'=> 'required',
+'cphone'=> 'required',
+'caddress'=> 'required',
+'district_id'=> 'required|exists:districts,id'
+
+<!-- 批量申请发票 -->
+$api->post('invoice/batch', 'Api\Order\InvoiceController@batch_apply');
+'order_ids' => 'required' 未申请开票订单ID已,链接
+'sort'  => 'required|in:1,2',
+'type'  => 'required|in:1,2',
+'title'  => 'required',
+'identifier'=> 'required_if:sort,2',
+'phone'=> 'required_if:type,2',
+'bank'=> 'required_if:type,2',
+'bank_account'=> 'required_if:type,2',
+'address'=> 'required_if:type,2',
+'consignee'=> 'required',
+'cphone'=> 'required',
+'caddress'=> 'required',
+'district_id'=> 'required|exists:districts,id'

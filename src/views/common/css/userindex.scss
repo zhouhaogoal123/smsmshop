@@ -1,0 +1,149 @@
+.iconitem {
+  font-size: 18px !important;
+}
+
+.user_body {
+  background: #f1f1f1;
+}
+
+.user_body:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.user_left {
+  float: left;
+  width: 234px;
+  margin-right: 20px;
+  padding-top: 30px;
+
+  .user_info_block {
+    background: #fff;
+    padding: 20px;
+
+    .username {
+      width: 100px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      color: #333;
+      font-weight: 700;
+    }
+
+    dl:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    dl dt img {
+      border-radius: 50%;
+      border: 1px solid #efefef;
+      box-sizing: border-box;
+    }
+
+    dl dt {
+      float: left;
+      margin-right: 15px;
+      width: 60px;
+      height: 60px;
+      border: 1px solid #f4f4f4;
+      border-radius: 50%;
+    }
+
+    dl dd {
+      font-size: 14px;
+      float: left;
+      margin-top: 10px;
+    }
+
+    dl dd.edit_user_info {
+      border: 1px solid $main_color;
+      line-height: 20px;
+      text-align: center;
+      color: $main_color;
+      padding: 0 15px;
+      margin-top: 5px;
+
+      a {
+        color: $main_color;
+      }
+    }
+  }
+
+  .user_info_block:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  .user_cat {
+    margin-top: 20px;
+    background: #fff;
+    padding: 20px;
+    font-size: 14px;
+
+    .user_cat_title {
+      font-size: 16px;
+      padding-left: 15px;
+    }
+
+    .user_cat_title i {
+      margin-right: 10px;
+      font-size: 14px;
+      color: $main_color;
+    }
+
+    .user_cat_list {
+      padding-left: 45px;
+      margin-bottom: 12px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #efefef;
+
+      ul li {
+        margin: 10px 0;
+
+        a {
+          color: #666;
+        }
+
+        a:hover {
+          color: $main_color;
+        }
+      }
+    }
+
+    .user_cat_list:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .other_user_info_step {
+    margin-top: 20px;
+    clear: both;
+
+    font {
+      float: left;
+      width: 40%;
+      font-size: 14px;
+    }
+
+    .user_aq i {
+      cursor: pointer;
+      margin-right: 10px;
+      margin-left: 5px;
+      line-height: 20px;
+    }
+
+    .user_aq i.font_color {
+      color: #67c23a;
+    }
+  }
+}
+
+.user_right {
+  float: left;
+  width: 946px;
+  padding-top: 30px;
+}

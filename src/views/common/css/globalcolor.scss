@@ -1,0 +1,18 @@
+// 颜色相关css样式
+$main_color:#ca141e; //主体红色
+$success_color:#effbef; //成功绿色
+$success_font:green; //成功绿色字体
+$company_font:#f5da81; //企业黄色字体
+
+//颜色相关css类
+.main_color {
+  color: $main_color !important;
+}
+
+.success_font {
+  color: $success_font !important;
+}
+
+.company_font {
+  color: $company_font !important;
+}
